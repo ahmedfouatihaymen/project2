@@ -1,0 +1,969 @@
+/*start global rules*/
+:root {
+    --maincolor1: #dc0109; 
+    --maincolor2: #FF5403;
+    --maincolor3: #fdc100;
+    --maincolor4: #FFF323;
+    --maincolor5: #fdfcf8;
+    --maincolor6: black;
+    --maincolor7: #490204;
+    --mainfont :17px;
+    --mainlineheight:1.6;
+    --maintransition: .3s;
+}
+/*end global rules*/
+/*start global rules*/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+/*start bigtitle*/
+.bigtitle .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bigtitle .container h1 {
+    font-size: 40px;
+    margin: 0;
+    margin-bottom: 20px;
+}
+.bigtitle .container div {
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    border: 2px solid;
+    margin-bottom: 20px;
+}
+.bigtitle .container div::before {
+    content: "";
+    height: 2px;
+    width: 55px;
+    position: absolute;
+    background-color: var(--maincolor3);
+    transform: translate(-104%, 5px);
+}
+.bigtitle .container div::after {
+    content: "";
+    height: 2px;
+    width: 55px;
+    position: absolute;
+    background-color: var(--maincolor3);
+    transform: translate(26%, 5px);
+}
+.bigtitle .container p {
+    max-width: 600px;
+    text-align: center;
+    line-height: var(--mainlineheight);
+    font-size: var(--mainfont);
+}
+/*end bigtitle*/
+/*end global rules*/
+/*start container*/
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/*small*/
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/*medium*/
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/*big*/
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/*end container*/
+/*start header*/
+.headerglobal {
+    background-image: url(../images/McDonalds-stratégie-marketing.webp);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.headerglobal .container header {
+display: flex;
+justify-content: space-between;
+padding: 25px 0;
+align-items: center;
+position: relative;
+z-index: 2;
+}
+.headerglobal .container header::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: var(--maincolor6);
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+}
+.headerglobal .container header img {
+  width: 55px;
+  height: 45px;
+  border-radius: 5px;
+}
+.headerglobal .container header nav{
+position: absolute;
+right: 30px;
+transform: translateX(-30px);
+}
+.headerglobal .container header ul {
+    display: flex;
+}
+.headerglobal .container header ul li {
+    list-style: none;
+}
+.headerglobal .container header ul li a {
+    text-decoration: none;
+    display: block;
+    color: var(--maincolor6);
+    letter-spacing: -1px;
+    padding: 36px 10px;
+    position: relative;
+    z-index: 3;
+    transition-duration: .1s;
+    font-size: var(--mainfont);
+}
+.headerglobal .container header ul li a.active,
+.headerglobal .container header ul li a:hover {
+    color: var(--maincolor3);
+    border-bottom: 2px solid var(--maincolor3);
+}
+.headerglobal .container header .linksmin {
+    display: none;
+}
+@media (max-width: 786px) {
+    .headerglobal .container header nav .linksmin {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: -10px;
+    }
+    .headerglobal .container header nav {
+        width: 100%;
+    }
+    .headerglobal .container header nav ul {
+        flex-direction: column;
+        top: 49px;
+        width: calc(100% + 30px);
+        right: -75px;
+        position: absolute;
+        display: none;
+        background-color: rgb(0 0 0 / 50%);
+    }
+    .headerglobal .container header nav ul li a {
+        margin: 0;
+        padding: 10px 15px;
+        opacity: 1;
+        color: var(--maincolor5);
+    }
+    .headerglobal .container header nav:hover ul {
+        display: block;
+    }
+}
+.headerglobal .container header .search {
+    position: relative;
+    
+}
+.headerglobal .container header .search::before {
+    content: "";
+    width: 1.5px;
+    height: 35px;
+    background-color: var(--maincolor6);
+    position: absolute;
+    top: -9px;
+    left: -18px;
+}
+/*end header*/
+/*start header text*/
+.headerglobal .headertext {
+    width: 700px;
+    background-color: rgb(0 0 0 / 60%);
+    position: absolute;
+    top: 30%;
+    padding: 50px;
+    padding-left: 110px;
+    
+}
+.headerglobal .headertext h1 {
+    margin: 0;
+    color: var(--maincolor3);
+    line-height: var(--mainlineheight);
+}
+.headerglobal .headertext p {
+    padding-top: 25px;
+    line-height: var(--mainlineheight);
+    font-size: var(--mainfont);
+    color: var(--maincolor5);
+}
+@media (max-width: 786px){
+    .headerglobal .headertext {
+        width: 100%;
+        padding-left: 50px;
+    }
+}
+/*end header text*/
+/*start header circle*/
+.headerglobal .headercircle .container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    transform: translate(-50%, 0px);
+}
+.headerglobal .headercircle .container div {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid var(--maincolor6);
+    margin: 0px 5px;
+}
+.headerglobal .headercircle .container div:nth-child(2) {
+    background-color: var(--maincolor6);
+}
+.headerglobal .headerdirc {
+    position: absolute;
+    top: 48%;
+    width: 100%;
+}
+.headerglobal .headerdirc i:nth-of-type(1) {
+    position: absolute;
+    left: 20px;
+}
+.headerglobal .headerdirc i:nth-of-type(2) {
+    position: absolute;
+    right: 20px;
+}
+@media (max-width:786px){
+    .headerglobal .headerdirc i {
+        display: none;
+    }
+}
+/*end header circle*/
+/*start services*/
+.services {
+    padding: 65px 0;
+    background-image: linear-gradient(to right, var(--maincolor1),var(--maincolor7));
+    color: var(--maincolor6);
+}
+.services .ourservices .container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 50px;
+    margin-top: 40px;
+}
+.services .ourservices .colservices {
+    width: 97%;
+}
+.services .ourservices .colservices .lineservices {
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    gap: 30px;
+    margin-top: 50px;
+}
+.services .ourservices .colservices .lineservices i {
+    font-size: 50px;
+    color: var(--maincolor3);
+}
+.services .ourservices .colservices .lineservices .textservices p {
+    line-height: var(--mainlineheight);
+    margin-top: 20px;
+    font-size: var(--mainfont);
+}
+@media (max-width:786px) { 
+    .services .ourservices .container {
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0;
+        gap: 0;
+        grid-template-columns: 1fr;
+    }
+    .services .ourservices .colservices .lineservices {
+        grid-template-columns: auto;
+        text-align: center;
+    }
+}
+/*end services*/
+/*start service design*/
+.servicedesign {
+    padding: 100px 0;
+    width: 100%;
+    background-image: url(../images/raw.jpg);
+    background-size: cover;
+    display: grid;
+    justify-content: flex-end;
+}
+.servicedesign .design {
+    background-color: rgb(0 0 0/60%);
+    width: 700px;
+    padding: 50px;
+    color: var(--maincolor5);
+}
+.servicedesign .design div {
+    display: flex;
+    margin-top: 20px;
+}
+.servicedesign .design h2 {
+    margin-bottom: 30px;
+    color: var(--maincolor3);
+}
+.servicedesign .design div i {
+    margin-right: 20px;
+    color: var(--maincolor3);
+    font-size: 20px;
+}
+.servicedesign .design div p {
+    font-size: var(--mainfont);
+}
+@media (max-width:786px) {
+    .servicedesign {
+        justify-content: none;
+        display: block;
+    }
+    .servicedesign .design {
+        width:100%;
+    }
+}
+/*end service design*/
+/*start portfolio*/
+.portfolio {
+    padding: 80px 0;
+    background-image: linear-gradient(to left, var(--maincolor7),var(--maincolor1));
+    color: var(--maincolor6);
+}
+.portfolio .portfoliolist .container {
+text-align: center;
+margin: 50px auto ;
+}
+.portfolio .portfoliolist .container span {
+    padding: 8px 10px;
+    border-radius: 10px;
+    font-size: var(--mainfont);
+}
+.portfolio .portfoliolist .container span:first-child {
+    background-color: var(--maincolor3);
+}
+.portfolio .portfolioimages {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.portfolio .portfolioimages div div {
+    width:100%;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+.portfolio .portfolioimages div div img {
+    width:100%;
+    height: 250px;
+    position: relative;
+    transition-duration: var(--maintransition);
+}
+.portfolio .portfolioimages div div img:hover {
+    transform: rotate(3deg) scale(1.1);
+}
+.portfolio .portfolioimages div div::after {
+    content: "Awesome Photo";
+    transition-duration: var(--maintransition);
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    padding-bottom: 40px;
+    background-color: rgb(0 0 0 / 60%);
+    width: 100%;
+    font-size: 17px;
+    color: var(--maincolor3);
+    transform: translateY(75px);
+}
+.portfolio .portfolioimages div div::before {
+    content: "Photography";
+    transition-duration: var(--maintransition);
+    position: absolute;
+    bottom: 15px;
+    font-size: 17px;
+    color: var(--maincolor5);
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    padding-left: 20px;
+    transform: translateY(75px);
+}
+.portfolio .portfolioimages div div:hover::after {
+    transform: translateY(0px);
+}
+.portfolio .portfolioimages div div:hover::before {
+    transform: translateY(0px);
+}
+@media (max-width:992px){
+    .portfolio .portfolioimages {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width:786px){
+    .portfolio .portfolioimages {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+.portfolio .portfoliomore .container {
+ text-align: center;  
+margin-top: 50px;
+}
+.portfolio .portfoliomore .container a{
+    text-decoration: none;
+    padding: 15px 20px;
+    background-color: var(--maincolor3);
+    color: var(--maincolor6);
+    border-radius: 10px; 
+    font-size: var(--mainfont);
+}
+/*end portfolio*/
+/*start video*/
+.video {
+    display: grid;
+    align-items: center;
+    position: relative;
+}
+.video video {
+width: 100%;
+}
+.video .videotext {
+background-color: rgb(0 0 0 / 60%);
+width: 100%;
+position: absolute;
+}
+.video .videotext .container {
+    text-align: center;
+    padding: 40px 0px;
+}
+.video .videotext .container h2 {
+    margin-bottom: 30px;
+    color: var(--maincolor3);
+}
+.video .videotext .container p {
+    color: var(--maincolor5);
+    font-size: var(--mainfont);
+    margin-bottom: 30px;
+}
+.video .videotext .container div a {
+text-decoration: none;
+background-color: var(--maincolor3);
+color: var(--maincolor6);
+font-size: var(--mainfont);
+padding: 10px;
+border-radius: 10px;
+}
+/*end video*/
+/*start aboutus*/
+.aboutus  {
+    background-image: linear-gradient(to left, var(--maincolor7),var(--maincolor1));
+    padding-top: 65px;
+}
+.aboutus .aboutuson {
+    background-image: url(../images/images\ \(6\).jpg);
+    width: 100%;
+    background-size: cover;
+    padding: 50px 0;
+}
+.aboutus .aboutuson .container {
+    display: grid;
+    grid-template-columns:repeat(4,1fr);
+    background-color: rgb(0 0 0 / 60%);
+    padding: 40px 0;
+}
+.aboutus .aboutuson .container div {
+    text-align: center;
+}
+.aboutus .aboutuson .container div .logoaboutus i {
+    background-color: var(--maincolor6);
+    padding: 10px;
+    border-radius: 50%;
+    color: var(--maincolor3);
+}
+.aboutus .aboutuson .container div h1 {
+    color: var(--maincolor3);
+}
+.aboutus .aboutuson .container div p {
+    color: var(--maincolor3);
+    font-size: var(--mainfont);
+}
+@media (max-width:786px) {
+    .aboutus .aboutuson .container {
+        grid-template-columns: 1fr;
+    }
+    .aboutus .aboutuson .container div p {
+        padding-bottom: 40px;
+    }
+
+}
+.aboutus > .container {
+    transform: translateY(4px);
+    text-align: center;
+   
+}
+.aboutus .container img {
+    width: 60%;
+}
+/*end aboutus*/
+/*start testskills*/
+.testskill {
+    background-image: linear-gradient(to left, var(--maincolor7),var(--maincolor1)) ;
+    padding-bottom: 65px;
+    padding-top: 65px;
+}
+.testskill .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(40%,1fr));
+    gap: 100px;
+}
+.testskill .container .test h3,
+.testskill .container .skills h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--maincolor3);
+}
+.testskill .container .test > p,
+.testskill .container .skills p {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: var(--mainfont);
+    line-height: var(--mainlineheight);
+}
+/*start test*/
+.testskill .container .test .teston {
+    display: flex;
+    margin-top: 60px;
+}
+.testskill .container .test .teston img {
+width: 100px;
+height: 100px;
+border-radius: 50%;
+}
+.testskill .container .test .teston p {
+    font-size: var(--mainfont);
+    margin-left: 50px;
+    position: relative;
+    line-height: var(--mainlineheight);
+}
+.testskill .container .test .teston p::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: var(--maincolor3);
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+}
+.testskill .container .test .teston p::before {
+    content: "John Doe,CEO";
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    font-size: var(--mainfont);
+    color: var(--maincolor3);
+}
+@media (max-width: 992px) {
+    .testskill .container .test .teston p {
+        margin-left: 25px;
+    }
+}
+@media (max-width:786px) {
+    .testskill .container {
+        grid-template-columns: 1fr;
+        
+    }
+    .testskill .container .test .teston {
+        display: block;
+        text-align: center;
+    }
+    .testskill .container .test .teston p {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+.testskill .container .test .testcircle  {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+.testskill .container .test .testcircle div {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid var(--maincolor3);
+    margin: 0px 5px;
+}
+.testskill .container .test .testcircle div:nth-child(2) {
+    background-color: var(--maincolor6);
+}
+/*end test*/
+/*start skills*/
+.testskill .container .skills .prog-holder {
+    margin-bottom: 47px;
+}
+.testskill .container .skills .prog-holder h4 {
+margin-bottom: 15px;
+}
+.testskill .container .skills .prog-holder .prog {
+    background-color: #fdfcf8;
+    width: 100%;
+    height: 20px;
+    position: relative;
+}
+.testskill .container .skills .prog-holder .prog span {
+    background-color: #fdc100;
+    height: 20px;
+    position: absolute;
+}
+.testskill .container .skills .prog-holder .prog span::before {
+    content: attr(data-progress);
+    position: absolute;
+    right: -19px;
+    top: -36px;
+    width: 40px;
+    height: 27px;
+    background-color: var(--maincolor6);
+    color: var(--maincolor5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.testskill .container .skills .prog-holder .prog span::after {
+    content: "";
+    position: absolute;
+    right: -6px;
+    top: -9px;
+    border: 6px solid;
+    border-color: var(--maincolor6) transparent transparent;
+    
+}
+/*end skills*/
+/*end testskills*/
+/*start photo*/
+.photo  {
+    background-image: url(../images/MCDA9496-BestBurger-Carousel.jpg);
+    width: 100%;
+    background-size: cover;
+    padding: 150px 0;
+}
+.photo .phototext {
+    background-color: rgb(0 0 0 / 60%);
+}
+.photo .phototext .container {
+    text-align: center;
+    padding: 60px;
+    line-height: var(--mainlineheight);
+    color: #fdfcf8;
+}
+.photo .phototext .container h2 {
+    font-size: 30px;
+}
+.photo .phototext .container p {
+    margin-top: 20px;
+    font-size: var(--mainfont);
+    color: #fdc100;
+}
+/*end photo*/
+/*start pricing*/
+.pricing  {
+    background-image: linear-gradient(to left, var(--maincolor7),var(--maincolor1)) ;
+    padding: 65px 0;
+}
+.pricing .container .prices {
+display: grid;
+gap: 30px;
+grid-template-columns: repeat(auto-fill,minmax(20%,1fr));
+padding-top: 50px;
+color: var(--maincolor5);
+}
+.pricing .container .prices .price {
+    text-align: center;
+    background-color: rgb(0 0 0 / 60%);
+    border-radius: 15px;
+    font-size: var(--mainfont);
+}
+.pricing .container .prices .price .pricepart:not(:first-child) {
+    border-top: 1px solid var(--maincolor3);
+
+}
+.pricing .container .prices .price .pricepart:not(:nth-child(2)) {
+    padding: 30px 0;
+}
+.pricing .container .prices .price .pricepart h1 {
+    margin: 0;
+    margin-top: 10px;
+    position: relative;
+    font-size: 50px;
+}
+.pricing .container .prices .price .pricepart h1::before {
+    content: "$";
+    position: absolute;
+    top: -10px;
+    transform: translateX(-22px);
+    font-size: 25px;
+}
+.pricing .container .prices .price .pricepart h1::after {
+    content: "/Mo";
+    position: absolute;
+    bottom: 0;
+    font-size: 20px;
+}
+.pricing .container .prices .price .pricepart:nth-child(2) p {
+    padding: 15px 0 ;
+    position: relative;
+    font-size: var(--mainfont);
+}
+.pricing .container .prices .price .pricepart:nth-child(2) p:not(:last-child)::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 70%;
+    transform: translateX(-50%);
+    background-color: var(--maincolor3);
+    height: 2px;
+
+}
+.pricing .container .prices .price .pricepart a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: var(--maincolor3);
+    border-radius: 10px;
+    color: var(--maincolor6);
+    font-size: var(--mainfont);
+}
+.pricing .container .pricingcontactus {
+    text-align: center;
+}
+.pricing .container .pricingcontactus p {
+    font-size: 22px;
+    margin: 40px 0 30px;
+}
+.pricing .container .pricingcontactus a {
+    text-decoration: none;
+    background-color: var(--maincolor3);
+    padding: 10px;
+    color: var(--maincolor6);
+    border-radius: 10px;
+    font-size: var(--mainfont);
+}
+@media (max-width:786px) {
+    .pricing .container .prices {
+        grid-template-columns: 1fr;
+
+    }
+}
+/*end pricing*/
+/*start email*/
+.email {
+    background-image: url(../images/9297d00a-d396-49b6-802d-c004511109dd-1920x728-3.jpg);
+    width: 100%;
+    background-size: cover;
+    height: 50vh;
+    display: grid;
+    align-items: center;
+    font-size: var(--mainfont);
+    background-color: rgb(0 0 0 / 60%);
+}
+.email .container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 50px;
+    
+}
+.email .container  div {
+    position: relative;
+    margin-top: 25px;
+}
+.email .container  div i {
+    position: absolute;
+    font-size: 30px;
+    top: 12px;
+    left: 14px;
+    color: var(--maincolor5);
+}
+.email .container  div input:nth-of-type(1) {
+    width: 65%;
+    padding: 15px;
+    padding-left: 50px;
+    background-color: rgb(0 0 0 / 60%);
+    caret-color: var(--maincolor5);
+    border:2px solid var(--maincolor6);
+    outline: none;
+    border-radius: 10px 0  0 10px;
+    outline: none;
+}
+.email .container  div input:nth-of-type(1)::placeholder {
+    color: var(--maincolor5);
+}
+.email .container  div input:nth-of-type(1):focus {
+    color: #fdfcf8;
+}
+.email .container  div input:nth-of-type(2) {
+    margin: -6px;
+    padding: 15px;
+    background-color: var(--maincolor3);
+    color: var(--maincolor6);
+    border-radius: 0 10px 10px 0;
+    border: 2px solid var(--maincolor6);
+    outline: none;
+}
+.email .container  p {
+    line-height: var(--mainlineheight);
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+@media (max-width:786px) {
+    .email .container {
+        grid-template-columns: 1fr;
+    }
+}
+/*end email*/
+/*start contact us*/
+.contactus {
+    background-image: linear-gradient(to left, var(--maincolor7),var(--maincolor1)) ;
+    padding: 65px 0;
+    font-size: var(--mainfont);
+}
+.contactus .container .contactuson {
+display: flex;
+flex-direction: row-reverse;
+margin-top: 50px;
+justify-content: space-around;
+}
+.contactus .container .contactuson form {
+width: 60%;
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+}
+.contactus .container .contactuson form input {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 30px;
+    background: none;
+    background-color: rgb(0 0 0 / 60%);
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    position: relative;
+}
+.contactus .container .contactuson form input::placeholder {
+    color: var(--maincolor5);
+    position: absolute;
+}
+.contactus .container .contactuson form input:not(:last-of-type):focus {
+    color: var(--maincolor5);
+}
+.contactus .container .contactuson form input:nth-of-type(3) {
+    height: 180px;
+}
+.contactus .container .contactuson form input:last-of-type {
+    width: fit-content;
+    padding: 10px;
+    background-color: var(--maincolor3);
+}
+.contactus .container .contactuson .numplace {
+text-align: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.contactus .container .contactuson .numplace h4 {
+    margin-bottom: 30px;
+    color: var(--maincolor3);
+}
+.contactus .container .contactuson .numplace div {
+    padding-bottom: 65px;
+}
+.contactus .container .contactuson .numplace p {
+    line-height: var(--mainlineheight);
+    width: 200px;
+    font-weight: 600;
+}
+@media (max-width:786px) {
+    .contactus .container .contactuson {
+        display: block;
+    }
+    .contactus .container .contactuson form {
+        width: 100%;
+    }
+}
+/*end contact us*/
+/*start footer*/
+footer {
+    background-image: url(../images/Camp-McDonalds-World-3-2022-652x342.jpg);
+    width: 100%;
+    background-size: cover;
+    padding: 65px 0;
+}
+footer .container {
+    text-align: center;
+    padding: 65px 0px;
+    background-color: rgb(0 0 0 / 60%);
+    width: fit-content;
+    border-radius: 15px;
+    color: var(--maincolor3);
+}
+footer .container img {
+    width: 150px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+footer .container h2 {
+    margin-bottom: 40px;
+    font-size: 30px;
+    position: relative;
+}
+footer .container h2::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 260px;
+    height: 2px;
+    background-color: var(--maincolor1);
+}
+footer .container .social i {
+    margin: 0 21px 40px;
+    font-size: 20px;
+}
+footer .container .right p {
+    font-size: var(--mainfont);
+    color: var(--maincolor5);
+    font-weight: 600;
+    padding: 0 10px;
+}
+footer .container .right p span {
+    color: var(--maincolor3);
+}
+/*end footer*/
